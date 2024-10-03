@@ -145,7 +145,7 @@ p1 + theme(
   legend.text = element_text(size = 12, family = "Times New Roman")
 )
 
-ggsave(here("plots", "figure 1.png"), p1, width = 10, height = 8, dpi = 500)
+ggsave(here("plots", "figure1.png"), p1, width = 10, height = 8, dpi = 500)
 ```
 
 # Summary statistic
