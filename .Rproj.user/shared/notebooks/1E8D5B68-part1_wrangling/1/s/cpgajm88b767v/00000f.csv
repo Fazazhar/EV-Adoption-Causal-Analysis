@@ -1,0 +1,7 @@
+"0","# performing the left join"
+"0","df_clean <- df_clean %>%"
+"0","  left_join(nevi_clean, by = c(""state"", "
+"0","                               ""year_month""))"
+"0",""
+"0","df_clean <- df_clean %>%"
+"0","  mutate(funding = coalesce(funding, 0))"

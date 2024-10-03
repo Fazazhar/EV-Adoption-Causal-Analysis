@@ -1,0 +1,3 @@
+"0",""
+"0","# removing all charging station that have NAs"
+"0","station_clean <- na.omit(station_clean)"

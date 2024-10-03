@@ -1,0 +1,8 @@
+"0","# First, ensure the 'date' column is a character if it's not already"
+"0","ev_clean$date <- as.character(ev_clean$date)"
+"0",""
+"0","# Now, convert it to a Date object using as.Date() with the correct format"
+"0","ev_clean$date <- as.Date(ev_clean$date, format = ""%B %d %Y"")"
+"0",""
+"0","# Create the year_month variable"
+"0","ev_clean$year_month <- format(ev_clean$date, ""%Y-%m"")"

@@ -1,0 +1,8 @@
+"0","# Count NA values in each column"
+"0","na_df <- colSums(is.na(df))"
+"0",""
+"0","# Create a dataframe"
+"0","na_df_dataframe <- data.frame(Column = names(na_df), NA_Count = na_df)"
+"0",""
+"0","# Print or view the dataframe"
+"0","print(na_df_dataframe)"

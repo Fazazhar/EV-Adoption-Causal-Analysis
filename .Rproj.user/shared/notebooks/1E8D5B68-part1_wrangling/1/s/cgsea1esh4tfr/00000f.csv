@@ -1,0 +1,2 @@
+"0","write.csv(nevi_clean, here(""data_clean"", ""nevi_clean.csv""), row.names = FALSE)"
+"0"," "

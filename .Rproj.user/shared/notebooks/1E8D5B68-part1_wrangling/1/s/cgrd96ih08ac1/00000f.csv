@@ -1,0 +1,8 @@
+"0","# Count NA values in each column"
+"0","na_station <- colSums(is.na(station))"
+"0",""
+"0","# Create a data frame"
+"0","na_station_df <- data.frame(Column = names(na_station), NA_Count = na_station)"
+"0",""
+"0","# Print or view the data frame"
+"0","print(na_station_df)"

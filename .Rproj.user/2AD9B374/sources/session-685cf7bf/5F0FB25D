@@ -1,14 +1,14 @@
 {
-    "id": "CECEF03B",
-    "path": "/Applications/Ω/UCSD/38-GPCO468-WI24/EV-Adoption-Causal-Analysis/analysis/part1_wrangling.qmd",
-    "project_path": "analysis/part1_wrangling.qmd",
+    "id": "5F0FB25D",
+    "path": "/Applications/Ω/UCSD/38-GPCO468-WI24/EV-Adoption-Causal-Analysis/analysis/part2_estimation.qmd",
+    "project_path": "analysis/part2_estimation.qmd",
     "type": "quarto_markdown",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1727924574231.0,
+    "created": 1727924868781.0,
     "source_on_save": false,
-    "relative_order": 1,
+    "relative_order": 3,
     "properties": {
         "rmdVisualMode": "false",
         "rmdVisualWrapConfigured": "true",
@@ -16,16 +16,16 @@
         "Source": "Source",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "3864:0",
-        "cursorPosition": "919,33",
-        "scrollLine": "914"
+        "rmdVisualModeLocation": "2:0",
+        "cursorPosition": "352,11",
+        "scrollLine": "330"
     },
     "folds": "",
-    "lastKnownWriteTime": 1727924861,
+    "lastKnownWriteTime": 1724288202,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1727924861276,
+    "last_content_update": 1724288202,
     "read_only": false,
     "read_only_alternatives": []
 }
