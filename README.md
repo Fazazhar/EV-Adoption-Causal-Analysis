@@ -9,6 +9,12 @@ This repository highlights the research paper titled **"Evaluating the Relations
 To achieve the federal goal to make half of all new vehicles sold in the U.S. in 2030 zero-emissions vehicles, the U.S. Department of Transportation’s (DOT) Federal Highway Administration (FHWA) has employed the National Electric Vehicle Infrastructure (NEVI) Formula Program, which aims to promote the interconnected network of publicly accessible electric vehicle (EV) charging stations. By analyzing panel data on a subset of U.S. counties, this paper examines the relationship between different classes of EV charging stations towards plug-in hybrid electric vehicles (PHEVs) and battery electric vehicles (BEVs). Though an instrumental approach in identifying potential endogeneity, this study suggests that public charging stations and the implication of the NEVI formula program might not pose the optimistic benefit in achieving the federal goal. This finding indicates the need to reevaluate current strategies and explore additional incentives to enhance the adoption of EVs and the effectiveness of public charging infrastructure.
 
 
+## Figure 1: Growth of EV Adoption
+
+![Temporal Growth of EV Adoption](plots/figure1.png)
+
+*Data Source: Washington State Department of Licensing (DOL), Feb. 2024.*
+
 ## Full Paper
 
 The full text of the paper can be found in the following file:
