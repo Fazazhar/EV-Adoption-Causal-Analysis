@@ -296,4 +296,3 @@ pwr_1 = pwr.t.test(n = 18643,
 plot(pwr_1)
 
 ```
-
