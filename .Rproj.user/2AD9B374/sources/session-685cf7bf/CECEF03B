@@ -1,0 +1,31 @@
+{
+    "id": "CECEF03B",
+    "path": "/Applications/Ω/UCSD/38-GPCO468-WI24/EV-Adoption-Causal-Analysis/analysis/part1_wrangling.qmd",
+    "project_path": "analysis/part1_wrangling.qmd",
+    "type": "quarto_markdown",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1727924574231.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "rmdVisualMode": "true",
+        "rmdVisualWrapConfigured": "true",
+        "source_window_id": "",
+        "Source": "Source",
+        "docOutlineVisible": "1",
+        "rmdVisualCollapsedChunks": "",
+        "rmdVisualModeLocation": "3864:0",
+        "cursorPosition": "171,0",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1727924713,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1727924713870,
+    "read_only": false,
+    "read_only_alternatives": []
+}
