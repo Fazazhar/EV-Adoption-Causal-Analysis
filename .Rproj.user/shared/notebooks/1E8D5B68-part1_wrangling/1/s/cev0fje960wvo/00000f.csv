@@ -1,6 +1,0 @@
-"0","# Loading the raw NEVI funding data"
-"0","nevi <- readxl::read_xlsx(here(""data_raw"", ""funding.xlsx""))"
-"0",""
-"0","nevi <- clean_names(nevi)"
-"0",""
-"0","view(nevi)"

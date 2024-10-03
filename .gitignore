@@ -2,3 +2,10 @@
 .Rhistory
 .RData
 .Ruserdata
+
+# Ignore .DS_Store files
+.DS_Store
+
+# Ignore R project user settings
+.Rproj.user/
+

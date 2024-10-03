@@ -1,2 +1,0 @@
-"0","# save the combined_pop dataset"
-"0","write.csv(df_clean, here(""data_clean"", ""df_final.csv""), row.names = FALSE)"

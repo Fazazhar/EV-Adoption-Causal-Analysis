@@ -1,8 +1,0 @@
-"0","# converting year variable as character"
-"0","state_pop$year <- as.character(state_pop$year)"
-"0",""
-"0","# performing the left join"
-"0","df_clean <- df_clean %>%"
-"0","  left_join(state_pop, by = c(""state"", "
-"0","                              ""year"""
-"0","                              ))"

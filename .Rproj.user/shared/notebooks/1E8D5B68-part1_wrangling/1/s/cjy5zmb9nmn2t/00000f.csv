@@ -1,8 +1,0 @@
-"0","## creatin a backup"
-"0","# station_backup <- station_with_county"
-"0","# station_with_county <- station_backup"
-"0",""
-"0","# Convert to Date and then to year_month format"
-"0","station_with_county$open_date <- as.Date(station_with_county$open_date)"
-"0",""
-"0","station_with_county$year_month <- format(station_with_county$open_date, ""%Y-%m"")"

@@ -1,2 +1,0 @@
-"0","write.csv(df_clean, here(""data_clean"", ""df_clean.csv""), row.names = FALSE)"
-"0"," "

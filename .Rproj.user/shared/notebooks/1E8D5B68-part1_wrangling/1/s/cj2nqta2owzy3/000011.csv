@@ -1,7 +1,0 @@
-"0","# Create a table with the number of distinct counties for each state"
-"0","distinct_counties_per_state <- ev %>%"
-"0","  group_by(state) %>%"
-"0","  summarise(Number_of_Distinct_Counties = n_distinct(county))"
-"0",""
-"0","# Print the distinct counties table"
-"0","print(distinct_counties_per_state)"

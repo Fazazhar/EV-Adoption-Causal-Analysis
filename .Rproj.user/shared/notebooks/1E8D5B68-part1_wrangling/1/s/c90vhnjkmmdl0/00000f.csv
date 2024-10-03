@@ -1,5 +1,0 @@
-"0","write.csv(public_station, here(""data_clean"", ""public_station.csv""), row.names = FALSE)"
-"0","write.csv(private_station, here(""data_clean"", ""private_station.csv""), row.names = FALSE)"
-"0","write.csv(station_with_county, here(""data_clean"", ""charging_station.shp""), row.names = FALSE)"
-"0","write.csv(station_temp, here(""data_clean"", ""charging_station.csv""), row.names = FALSE)"
-"0",""
