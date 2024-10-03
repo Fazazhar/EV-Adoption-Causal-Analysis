@@ -1,6 +1,0 @@
-"0","# Remove these counties from the dataset"
-"0","df_clean <- df %>%"
-"0","  anti_join(counties_states_with_NA, by = c(""county"", ""state""))"
-"0",""
-"0","# View the first few rows of the cleaned data frame"
-"0","head(df_clean)"

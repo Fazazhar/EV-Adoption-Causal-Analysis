@@ -1,8 +1,0 @@
-"0",""
-"0","# Collapse the data frame to get the total tally of the charging station for each year_month"
-"0","collapsed_treat_public <- treat_public %>%"
-"0","  dplyr::group_by(county, state, year_month) %>%"
-"0","  dplyr::summarize(total_tally_of_the_charging_station = max(tally_of_the_charging_station), .groups = 'drop')"
-"0",""
-"0","# View the first few rows of the collapsed data frame"
-"0","head(collapsed_treat_public)"

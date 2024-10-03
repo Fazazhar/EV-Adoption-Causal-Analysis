@@ -49,10 +49,10 @@ set.seed(0000)
 
 ```{r message = FALSE}
 # Final panel dataset
-df_final <- read_csv(here("Data Clean", "df_final.csv"))
+df_final <- read_csv(here("data_clean", "df_final.csv"))
 
 # EV clean dataset
-ev_clean <- read_csv(here("Data Clean", "ev_clean.csv"))
+ev_clean <- read_csv(here("data_clean", "ev_clean.csv"))
 
 # Cleaning the names
 df_final <- clean_names(df_final)
@@ -145,7 +145,7 @@ p1 + theme(
   legend.text = element_text(size = 12, family = "Times New Roman")
 )
 
-ggsave(here("Plots", "figure 1.png"), p1, width = 10, height = 8, dpi = 500)
+ggsave(here("plots", "figure 1.png"), p1, width = 10, height = 8, dpi = 500)
 ```
 
 # Summary statistic
@@ -297,107 +297,3 @@ plot(pwr_1)
 
 ```
 
-# IV: Funding x \### models
-
-``` {#r}
-# First Stage: Regress the treatment variable on the instrument and control variable
-v2.1 <- feols(public_station ~ funding + non_ev + type + gas_price + state_population | state + year_month, data = df_final)
-
-# Get the predicted values of the treatment variable from the first stage
-df_final$public_station_hat2 <- predict(v2.1)
-
-# Second Stage: Regress the outcome variable on the predicted treatment and control variable
-v2.2 <- feols(c(bev, phev)~ public_station_hat1 + non_ev + type + gas_price + state_population | state + year_month, data = df_final)
-
-# Second Stage: Regress the outcome variable on the predicted treatment and control variable lagged 6
-v2.2lag <- feols(c(bev_lag6, phev_lag6) ~ public_station_hat1 + non_ev + type + state_population | state + year_month, data = df_final)
-
-etable(v2.1, v2.2, v2.2lag, view = TRUE,
-       notes = c("Table 4: Two-stage least squares (2SLS) models on the uptake of EVs",
-                 "Notes: Avg. retail gas price ($) was removed due to colinearity"),
-       headers = list(":_:" = list("First stage" = 1,
-                                   "Second stage" = 2,
-                                   "Second stage (w/ lag)" = 2)
-                      )
-)
-```
-
-# Residual plots
-
-```         
-# Get the residuals from the first stage regression
-residuals_v1.1 <- residuals(v1.1)
-
-# Get the residuals from the second stage regression
-residuals_v1.2 <- residuals(v1.2)
-
-# Store the residuals in your dataframe
-df_final$residuals_v1.1 <- residuals_v1.1
-
-# Store the residuals in your dataframe
-df_final$residuals_v1.2 <- residuals_v1.2
-
-# Create a scatter plot of residuals vs. the instrument variable
-r1 <- ggplot(df_final, aes(x=funding, y=residuals_v1.1)) + 
-  geom_point() +  # Add points
-  geom_smooth(method="lm", color="red", linetype="dashed") +  # Add a linear trend line
-  labs(title="Residuals, first stage",
-       subtitle="Conditional on state fixed effects, county-level controls, clustering, and time trends",
-       x="x-axis",
-       y="y-axis") + 
-  theme_minimal()  # Use a minimal theme
-
-r1
-
-# Create a scatter plot of residuals vs. the instrument variable
-r2 <- ggplot(df_final, aes(x=bev, y=residuals_v1.2[,1])) + 
-  geom_point() +  # Add points
-  geom_smooth(method="lm", color="red", linetype="dashed") +  # Add a linear trend line
-  labs(title="Residuals, first stage",
-       subtitle="Conditional on state fixed effects, county-level controls, clustering, and time trends",
-       x="x-axis",
-       y="y-axis") + 
-  theme_minimal()  # Use a minimal theme
-
-r2
-
-# Create a scatter plot of residuals vs. the instrument variable
-r3 <- ggplot(df_final, aes(x=phev, y=residuals_v1.2[,2])) + 
-  geom_point() +  # Add points
-  geom_smooth(method="lm", color="red", linetype="dashed") +  # Add a linear trend line
-  labs(title="Residuals, first stage",
-       subtitle="Conditional on state fixed effects, county-level controls, clustering, and time trends",
-       x="x-axis",
-       y="y-axis") + 
-  theme_minimal()  # Use a minimal theme
-
-r3
-
-# Add an index to your dataframe
-df_final$index <- seq_along(df_final$residuals_v1.2[,1])
-
-# Determine the number of bins for the index
-num_index_bins <- 10  # This is an arbitrary choice and might need adjustment based on your data
-
-# Create equally sized bins based on the index
-df_final$index_bins <- cut(df_final$index, breaks = num_index_bins, include.lowest = TRUE, labels = FALSE)
-
-# Aggregate the data by index bins to get the mean residual for each bin
-binned_data <- df_final %>%
-  group_by(index_bins) %>%
-  summarise(mean_residual = mean(residuals_v1_2, na.rm = TRUE)) %>%
-  ungroup()  # Always ungroup if you are done with grouped operations
-
-# Get the midpoint of the bins fo# Get the midpoint of the bins fo# Get the midpoint of the bins for plotting on the x-axis
-bin_width <- length(df_final$index) / num_index_bins
-binned_data$bin_midpoint <- (as.numeric(as.character(binned_data$index_bins)) - 0.5) * bin_width
-
-# Create the plot
-ggplot(binned_data, aes(x = bin_midpoint, y = mean_residual)) +
-  geom_point() +  # Add the mean residuals for each bin as points
-  geom_line() +  # Connect the points with a line
-  labs(title = "Binned Residuals Plot",
-       x = "Index Bin Midpoint",
-       y = "Mean Residual") +
-  theme_minimal()
-```

@@ -1,8 +1,0 @@
-"0","# Count NA values in each column"
-"0","na_expanded_treat_public <- colSums(is.na(collapsed_treat_public))"
-"0",""
-"0","# Create a dataframe"
-"0","na_expanded_treat_public_df <- data.frame(Column = names(na_expanded_treat_public), NA_Count = na_expanded_treat_public)"
-"0",""
-"0","# Print or view the dataframe"
-"0","print(na_expanded_treat_public_df)"

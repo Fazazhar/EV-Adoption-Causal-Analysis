@@ -1,8 +1,0 @@
-"0",""
-"0","# counties that have NAs"
-"0","counties_states_with_NA <- df %>%"
-"0","  filter(is.na(public_station)) %>%"
-"0","  distinct(county, state)"
-"0",""
-"0","# View the result"
-"0","print(counties_states_with_NA)"
