@@ -13,7 +13,17 @@ To achieve the federal goal to make half of all new vehicles sold in the U.S. in
 
 The full text of the paper can be found in the following file:
 
-- [EV Adoption Memo.pdf](analysis/EV_adoption_memo.pdf)
+[EV Adoption Memo.pdf](analysis/EV_adoption_memo.pdf)
+
+### Supplementary Materials
+
+1. **Data Wrangling and Feature Engineering**
+   - The detailed processes of data wrangling and feature engineering can be found in the following QMD file:
+   - [Data Wrangling and Feature Engineering.qmd](analysis/part1_wrangling.qmd)
+
+2. **Data Estimation and Causal Analysis**
+   - The methodology and results for data estimation and causal analysis are outlined in the following QMD file:
+   - [Data Estimation and Causal Analysis.qmd](analysis/part2_estimation.qmd)
 
 ## Key Findings
 
