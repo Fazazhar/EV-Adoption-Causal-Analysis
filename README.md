@@ -2,7 +2,7 @@
 
 ## Paper Overview
 
-This repository highlights the research paper titled **"Evaluating the Relationship of EV Charging Station on the Uptake of Electric Vehicles — Implication of the NEVI Formula Program."** The study examines the impact of electric vehicle (EV) charging infrastructure on the adoption rates of electric vehicles, with a particular focus on the implications of the NEVI Formula Program.
+This repository highlights the research paper titled **"Evaluating the Relationship of EV Charging Station on the Uptake of Electric Vehicles — Implication of the NEVI Formula Program."** The study examines the impact of electric vehicle (EV) charging infrastructure on the adoption rates of electric vehicles, with a particular focus on the implications of the NEVI Formula Program. The paper is available as a preprint on arXiv and can be accessed [here](https://arxiv.org/abs/2412.03608).
 
 ## Abstract
 
@@ -15,14 +15,7 @@ To achieve the federal goal to make half of all new vehicles sold in the U.S. in
 
 *Data Source: Washington State Department of Licensing (DOL), Feb. 2024.*
 
-## Full Paper
-
-The full text of the paper can be found in the following file:
-
-[EV Adoption Memo.pdf](analysis/EV_adoption_memo.pdf)
-
-### Supplementary Materials
-
+## Methodology and Process
 1. **Data Wrangling and Feature Engineering**
    - The detailed processes of data wrangling and feature engineering can be found in the following QMD file:
    - [Data Wrangling and Feature Engineering.qmd](analysis/part1_wrangling.qmd)
